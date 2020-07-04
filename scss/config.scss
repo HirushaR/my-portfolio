@@ -4,7 +4,7 @@ $show-home-image: true;
 $home-image: url(../image/background.jpg);
 $background-opacity: 0.9;
 
-@mixin  easeOut {
+@mixin easeOut {
   transition: all 1s ease-out;
 }
 
@@ -26,6 +26,15 @@ $background-opacity: 0.9;
       }
     }
 
+  }
+}
+
+//set color
+@function set-text-color($color){
+  @if (lightness($color)> 40){
+    @return #000;
+  }@else {
+    @return #fff;
   }
 }
 
